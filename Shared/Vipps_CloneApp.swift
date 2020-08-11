@@ -8,10 +8,10 @@
 import SwiftUI
 
 @main
-struct Vipps_CloneApp: App {
+struct Vipps_CloneApp: App {    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            Navigation()
         }
     }
 }
