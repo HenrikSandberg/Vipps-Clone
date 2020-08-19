@@ -11,8 +11,16 @@
 		AF22525524E2948900CA9457 /* MoneyModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF22525324E2948900CA9457 /* MoneyModal.swift */; };
 		AF22525724E29B6600CA9457 /* VisualEffectBlur.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF22525624E29B6600CA9457 /* VisualEffectBlur.swift */; };
 		AF22525924E29B7000CA9457 /* VisualEffectBlur.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF22525824E29B7000CA9457 /* VisualEffectBlur.swift */; };
-		AF22525B24E29CF600CA9457 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF22525A24E29CF600CA9457 /* Transaction.swift */; };
-		AF22525C24E29CF600CA9457 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF22525A24E29CF600CA9457 /* Transaction.swift */; };
+		AF5392E724E2BFFF00B9B0C2 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5392E624E2BFFF00B9B0C2 /* Transaction.swift */; };
+		AF5392E824E2BFFF00B9B0C2 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5392E624E2BFFF00B9B0C2 /* Transaction.swift */; };
+		AF5392EA24E2D01300B9B0C2 /* MoneyField.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5392E924E2D01300B9B0C2 /* MoneyField.swift */; };
+		AF5392EB24E2D01300B9B0C2 /* MoneyField.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5392E924E2D01300B9B0C2 /* MoneyField.swift */; };
+		AF5392ED24E2D4AA00B9B0C2 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5392EC24E2D4AA00B9B0C2 /* CustomTextField.swift */; };
+		AF5392EE24E2D4AA00B9B0C2 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5392EC24E2D4AA00B9B0C2 /* CustomTextField.swift */; };
+		AFA8F5D424E2AE1100E937EB /* QuickProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA8F5D324E2AE1100E937EB /* QuickProfile.swift */; };
+		AFA8F5D524E2AE1100E937EB /* QuickProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA8F5D324E2AE1100E937EB /* QuickProfile.swift */; };
+		AFA8F5D724E2AFE600E937EB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA8F5D624E2AFE600E937EB /* User.swift */; };
+		AFA8F5D824E2AFE600E937EB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA8F5D624E2AFE600E937EB /* User.swift */; };
 		AFEA3F1A24E1DBA800B9BE47 /* RoundImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEA3F1924E1DBA800B9BE47 /* RoundImage.swift */; };
 		AFEA3F1B24E1DBAD00B9BE47 /* RoundImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEA3F1924E1DBA800B9BE47 /* RoundImage.swift */; };
 		AFEA3F1C24E1E16A00B9BE47 /* MainListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF1923B24E1D68200596753 /* MainListItem.swift */; };
@@ -43,7 +51,11 @@
 		AF22525324E2948900CA9457 /* MoneyModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyModal.swift; sourceTree = "<group>"; };
 		AF22525624E29B6600CA9457 /* VisualEffectBlur.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisualEffectBlur.swift; sourceTree = "<group>"; };
 		AF22525824E29B7000CA9457 /* VisualEffectBlur.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisualEffectBlur.swift; sourceTree = "<group>"; };
-		AF22525A24E29CF600CA9457 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
+		AF5392E624E2BFFF00B9B0C2 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
+		AF5392E924E2D01300B9B0C2 /* MoneyField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyField.swift; sourceTree = "<group>"; };
+		AF5392EC24E2D4AA00B9B0C2 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		AFA8F5D324E2AE1100E937EB /* QuickProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickProfile.swift; sourceTree = "<group>"; };
+		AFA8F5D624E2AFE600E937EB /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		AFEA3F1924E1DBA800B9BE47 /* RoundImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundImage.swift; sourceTree = "<group>"; };
 		AFEA3F1D24E1E8A300B9BE47 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		AFEA3F2224E1ED9100B9BE47 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
@@ -86,6 +98,7 @@
 			children = (
 				AFF1921924E1CF5E00596753 /* HomeView.swift */,
 				AF22525324E2948900CA9457 /* MoneyModal.swift */,
+				AF5392E624E2BFFF00B9B0C2 /* Transaction.swift */,
 			);
 			path = Pages;
 			sourceTree = "<group>";
@@ -156,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				AFEA3F2B24E1F05200B9BE47 /* NavigationContent.swift */,
+				AFA8F5D624E2AFE600E937EB /* User.swift */,
 			);
 			path = Modell;
 			sourceTree = "<group>";
@@ -167,7 +181,8 @@
 				AFEA3F1924E1DBA800B9BE47 /* RoundImage.swift */,
 				AFEA3F1D24E1E8A300B9BE47 /* RoundButton.swift */,
 				AFEA3F2524E1EF5900B9BE47 /* ActionButtons.swift */,
-				AF22525A24E29CF600CA9457 /* Transaction.swift */,
+				AFA8F5D324E2AE1100E937EB /* QuickProfile.swift */,
+				AF5392E924E2D01300B9B0C2 /* MoneyField.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -176,6 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				AFF1923D24E1D82A00596753 /* Libraryswift.swift */,
+				AF5392EC24E2D4AA00B9B0C2 /* CustomTextField.swift */,
 			);
 			path = Library;
 			sourceTree = "<group>";
@@ -277,17 +293,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF22525B24E29CF600CA9457 /* Transaction.swift in Sources */,
 				AFEA3F2324E1ED9100B9BE47 /* TabBar.swift in Sources */,
 				AFEA3F1E24E1E8A300B9BE47 /* RoundButton.swift in Sources */,
+				AF5392E724E2BFFF00B9B0C2 /* Transaction.swift in Sources */,
+				AF5392EA24E2D01300B9B0C2 /* MoneyField.swift in Sources */,
 				AFEA3F1A24E1DBA800B9BE47 /* RoundImage.swift in Sources */,
 				AFEA3F2F24E2921300B9BE47 /* Navigation.swift in Sources */,
 				AF22525424E2948900CA9457 /* MoneyModal.swift in Sources */,
 				AFEA3F2624E1EF5900B9BE47 /* ActionButtons.swift in Sources */,
+				AF5392ED24E2D4AA00B9B0C2 /* CustomTextField.swift in Sources */,
+				AFA8F5D724E2AFE600E937EB /* User.swift in Sources */,
 				AFF1923C24E1D68200596753 /* MainListItem.swift in Sources */,
 				AF22525724E29B6600CA9457 /* VisualEffectBlur.swift in Sources */,
 				AFF1922D24E1CF6100596753 /* HomeView.swift in Sources */,
 				AFF1922B24E1CF6100596753 /* Vipps_CloneApp.swift in Sources */,
+				AFA8F5D424E2AE1100E937EB /* QuickProfile.swift in Sources */,
 				AFEA3F2C24E1F05200B9BE47 /* NavigationContent.swift in Sources */,
 				AFEA3F2924E1EFF700B9BE47 /* Sidebar.swift in Sources */,
 				AFF1923E24E1D82A00596753 /* Libraryswift.swift in Sources */,
@@ -298,17 +318,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF22525C24E29CF600CA9457 /* Transaction.swift in Sources */,
 				AFEA3F2424E1ED9100B9BE47 /* TabBar.swift in Sources */,
 				AFEA3F1F24E1E8A300B9BE47 /* RoundButton.swift in Sources */,
+				AF5392E824E2BFFF00B9B0C2 /* Transaction.swift in Sources */,
+				AF5392EB24E2D01300B9B0C2 /* MoneyField.swift in Sources */,
 				AFF1922E24E1CF6100596753 /* HomeView.swift in Sources */,
 				AFEA3F3024E2921300B9BE47 /* Navigation.swift in Sources */,
 				AF22525524E2948900CA9457 /* MoneyModal.swift in Sources */,
 				AFEA3F2724E1EF5900B9BE47 /* ActionButtons.swift in Sources */,
+				AF5392EE24E2D4AA00B9B0C2 /* CustomTextField.swift in Sources */,
+				AFA8F5D824E2AFE600E937EB /* User.swift in Sources */,
 				AFF1923F24E1D82A00596753 /* Libraryswift.swift in Sources */,
 				AF22525924E29B7000CA9457 /* VisualEffectBlur.swift in Sources */,
 				AFEA3F1B24E1DBAD00B9BE47 /* RoundImage.swift in Sources */,
 				AFF1922C24E1CF6100596753 /* Vipps_CloneApp.swift in Sources */,
+				AFA8F5D524E2AE1100E937EB /* QuickProfile.swift in Sources */,
 				AFEA3F2D24E1F05200B9BE47 /* NavigationContent.swift in Sources */,
 				AFEA3F2A24E1EFF700B9BE47 /* Sidebar.swift in Sources */,
 				AFEA3F1C24E1E16A00B9BE47 /* MainListItem.swift in Sources */,

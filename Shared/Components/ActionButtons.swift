@@ -20,21 +20,21 @@ struct ActionButtons: View {
                     showingSend.toggle()
                     
                 }).sheet(isPresented: $showingSend) {
-                    MoneyModal(title: "Send")
+                    MoneyModal(isSending: true)
                 }
             
             RoundButton(title: "Be om", ikon: "arrow.down")
                 .onTapGesture( perform: {
                     showingAsk.toggle()
                 }).sheet(isPresented: $showingAsk) {
-                    MoneyModal(title: "Be om")
+                    MoneyModal(isSending: false)
                 }
             
             RoundButton(title: "Skann", ikon: "scanner")
                 .onTapGesture( perform: {
                     showingSkann.toggle()
                 }).sheet(isPresented: $showingSkann) {
-                    MoneyModal(title: "Skann")
+                    MoneyModal(isSending: false)
                 }
         })
     }
