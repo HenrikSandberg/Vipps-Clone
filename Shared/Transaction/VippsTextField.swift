@@ -9,10 +9,9 @@ import SwiftUI
 
 struct VippsTextField: View {
     @Binding var text: String
-    @Binding var number: Int
-    @Binding var warning: Warning
-    var isValid: Bool
+    @Binding var warning: Bool
     @Binding var description: String
+    var number: Int
 
     var body: some View {
         HStack {
@@ -30,20 +29,10 @@ struct VippsTextField: View {
                             let newNumber = Int(numberText)!
                             
                             if description.count <= 0 {
-                                if newNumber < 100000 {
-                                    number = newNumber
-                                    warning.display = false
-                                    
-                                } else {
-                                    number = newNumber
-                                    warning.display = true
-                                    warning.text = "Høye beløp må ha beskrivelse"
-                                }
-                                text = number.formattedWithSeparator
+                                warning = newNumber >= 1000000
+                                text = warning ? number.formattedWithSeparator : newNumber.formattedWithSeparator
                             } else {
-                                print("Now added description")
-                                number = Int(numberText)!
-                                warning.display = false
+                                warning = false
                             }
                         }
                     })

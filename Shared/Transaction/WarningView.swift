@@ -8,11 +8,11 @@
 import SwiftUI
 
 struct WarningView: View {
-    @Binding var warning: Warning
+    var warningString: String
     var simpleWarning: Bool
     
     var body: some View {
-        Text(warning.text)
+        Text(warningString)
             .foregroundColor(Color(simpleWarning ? "Ebony" : "Feedback No"))
             .padding()
             .background(Color(simpleWarning ? "Vipps Background change" : "Feedback No Light"))

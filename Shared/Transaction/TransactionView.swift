@@ -10,22 +10,38 @@ import SwiftUI
 struct Transaction: View {
     var user: User
     var isSending: Bool
-    @Binding var presentationMode:PresentationMode
+    @Binding var presentationMode: PresentationMode
     @State private var showingAlert = false
     
     //MARK: State for transactions
     @State var text: String = ""
-    @State var number: Int = 0
-    @State var warning: Warning = Warning()
+    @State var shouldDisplayWarning: Bool = false
     @State var description: String = ""
     
     var isValid: Bool {
         if 0 < number && number < 100000 {
             return true
+        } else {
+            return description.count > 0 && number > 0 && number < 500000
         }
-        return description.count > 0 && number > 0 && number < 1000000
     }
     
+    var warning: WarningView {
+        if number <= 0 {
+            return WarningView(warningString: "Tast inn beløp for å fortsette", simpleWarning: false)
+        } else if number >= 10000 && description.count <= 0 {
+            return WarningView(warningString: "Høye beløp må ha beskrivelse", simpleWarning: true)
+        } else {
+            return WarningView(warningString: "Høye beløp må ha beskrivelse", simpleWarning: true)
+        }
+    }
+    
+    var number: Int {
+        let newText = text.removAllWhitespaces
+        return Int(newText) != nil ? Int(newText)! : 0
+    }
+    
+    //MARK: Body
     var body: some View {
         //MARK: Display name, picture and number
         VStack(alignment: .center, spacing: 20, content: {
@@ -43,17 +59,19 @@ struct Transaction: View {
             
             //MARK: Display money field & and relevenat content
             VStack {
-                if warning.display && description.count <= 0 || warning.display && number <= 0 {
-                    if number <= 0 {
-                        WarningView(warning: $warning, simpleWarning: false)
-                    } else if description.count <= 0 {
-                        WarningView(warning: $warning, simpleWarning: true)
-                    }
-                }
+                if shouldDisplayWarning { warning }
                 
                 VStack(alignment: .center, spacing: 15, content: {
-                    VippsTextField(text: $text, number: $number, warning: $warning, isValid: isValid, description: $description)
-                    DescriptionTextField(text: $description)
+                    VippsTextField(
+                        text: $text,
+                        warning: $shouldDisplayWarning,
+                        description:$description,
+                        number: number
+                    )
+                    DescriptionTextField(
+                        text: $description,
+                        warning: $shouldDisplayWarning
+                    )
                     Spacer()
                 })
                 .frame(width: 200, height: 75, alignment: .center)
@@ -62,7 +80,8 @@ struct Transaction: View {
                 .clipShape(RoundedRectangle(cornerRadius: 30))
                 
                 Spacer()
-                ActionButton(text: "Neste", isValid: isValid, number: $number, warning: $warning)
+                
+                ActionButton(text: "Neste", isValid: isValid, number: number, warning: $shouldDisplayWarning)
             }
         })
         .navigationBarTitle(Text("\((isSending) ? "Sender penger til" : "Ber om penger fra")"), displayMode: .inline)

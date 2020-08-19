@@ -18,8 +18,7 @@ struct Sidebar: View {
         NavigationView {
 
             #if os(iOS)
-            content
-                .navigationTitle("Vipps")
+            content.navigationTitle("Vipps")
             HomeView()
             #else
             content

@@ -11,14 +11,12 @@
 		AF22525524E2948900CA9457 /* MoneyModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF22525324E2948900CA9457 /* MoneyModal.swift */; };
 		AF22525724E29B6600CA9457 /* VisualEffectBlur.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF22525624E29B6600CA9457 /* VisualEffectBlur.swift */; };
 		AF22525924E29B7000CA9457 /* VisualEffectBlur.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF22525824E29B7000CA9457 /* VisualEffectBlur.swift */; };
-		AF5392E724E2BFFF00B9B0C2 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5392E624E2BFFF00B9B0C2 /* Transaction.swift */; };
-		AF5392E824E2BFFF00B9B0C2 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5392E624E2BFFF00B9B0C2 /* Transaction.swift */; };
+		AF5392E724E2BFFF00B9B0C2 /* TransactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5392E624E2BFFF00B9B0C2 /* TransactionView.swift */; };
+		AF5392E824E2BFFF00B9B0C2 /* TransactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5392E624E2BFFF00B9B0C2 /* TransactionView.swift */; };
 		AF5392ED24E2D4AA00B9B0C2 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5392EC24E2D4AA00B9B0C2 /* CustomTextField.swift */; };
 		AF5392EE24E2D4AA00B9B0C2 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5392EC24E2D4AA00B9B0C2 /* CustomTextField.swift */; };
 		AF9E1BC724ED23F300655FC7 /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9E1BC624ED23F300655FC7 /* ActionButton.swift */; };
 		AF9E1BC824ED23F300655FC7 /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9E1BC624ED23F300655FC7 /* ActionButton.swift */; };
-		AF9E1BCA24ED54E100655FC7 /* Warning.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9E1BC924ED54E100655FC7 /* Warning.swift */; };
-		AF9E1BCB24ED54E100655FC7 /* Warning.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9E1BC924ED54E100655FC7 /* Warning.swift */; };
 		AF9E1BCD24ED552F00655FC7 /* WarningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9E1BCC24ED552F00655FC7 /* WarningView.swift */; };
 		AF9E1BCE24ED552F00655FC7 /* WarningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9E1BCC24ED552F00655FC7 /* WarningView.swift */; };
 		AF9E1BD024ED5EB900655FC7 /* VippsTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9E1BCF24ED5EB900655FC7 /* VippsTextField.swift */; };
@@ -59,10 +57,9 @@
 		AF22525324E2948900CA9457 /* MoneyModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyModal.swift; sourceTree = "<group>"; };
 		AF22525624E29B6600CA9457 /* VisualEffectBlur.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisualEffectBlur.swift; sourceTree = "<group>"; };
 		AF22525824E29B7000CA9457 /* VisualEffectBlur.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisualEffectBlur.swift; sourceTree = "<group>"; };
-		AF5392E624E2BFFF00B9B0C2 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
+		AF5392E624E2BFFF00B9B0C2 /* TransactionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionView.swift; sourceTree = "<group>"; };
 		AF5392EC24E2D4AA00B9B0C2 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		AF9E1BC624ED23F300655FC7 /* ActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
-		AF9E1BC924ED54E100655FC7 /* Warning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Warning.swift; sourceTree = "<group>"; };
 		AF9E1BCC24ED552F00655FC7 /* WarningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarningView.swift; sourceTree = "<group>"; };
 		AF9E1BCF24ED5EB900655FC7 /* VippsTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VippsTextField.swift; sourceTree = "<group>"; };
 		AF9E1BD224ED5ED900655FC7 /* DescriptionTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionTextField.swift; sourceTree = "<group>"; };
@@ -105,12 +102,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AF9E1BD524ED811900655FC7 /* Transaction */ = {
+			isa = PBXGroup;
+			children = (
+				AF9E1BCC24ED552F00655FC7 /* WarningView.swift */,
+				AF22525324E2948900CA9457 /* MoneyModal.swift */,
+				AF5392E624E2BFFF00B9B0C2 /* TransactionView.swift */,
+				AF9E1BC624ED23F300655FC7 /* ActionButton.swift */,
+				AF9E1BCF24ED5EB900655FC7 /* VippsTextField.swift */,
+				AF9E1BD224ED5ED900655FC7 /* DescriptionTextField.swift */,
+			);
+			path = Transaction;
+			sourceTree = "<group>";
+		};
 		AFEA3F2024E1EC8000B9BE47 /* Pages */ = {
 			isa = PBXGroup;
 			children = (
 				AFF1921924E1CF5E00596753 /* HomeView.swift */,
-				AF22525324E2948900CA9457 /* MoneyModal.swift */,
-				AF5392E624E2BFFF00B9B0C2 /* Transaction.swift */,
 			);
 			path = Pages;
 			sourceTree = "<group>";
@@ -139,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				AFEA3F2124E1ED6500B9BE47 /* Navigation */,
+				AF9E1BD524ED811900655FC7 /* Transaction */,
 				AFEA3F2024E1EC8000B9BE47 /* Pages */,
 				AFF1923A24E1D61D00596753 /* Components */,
 				AFF1923924E1D61400596753 /* Modell */,
@@ -182,7 +191,6 @@
 			children = (
 				AFEA3F2B24E1F05200B9BE47 /* NavigationContent.swift */,
 				AFA8F5D624E2AFE600E937EB /* User.swift */,
-				AF9E1BC924ED54E100655FC7 /* Warning.swift */,
 			);
 			path = Modell;
 			sourceTree = "<group>";
@@ -195,10 +203,6 @@
 				AFEA3F1D24E1E8A300B9BE47 /* RoundButton.swift */,
 				AFEA3F2524E1EF5900B9BE47 /* ActionButtons.swift */,
 				AFA8F5D324E2AE1100E937EB /* QuickProfile.swift */,
-				AF9E1BC624ED23F300655FC7 /* ActionButton.swift */,
-				AF9E1BCC24ED552F00655FC7 /* WarningView.swift */,
-				AF9E1BCF24ED5EB900655FC7 /* VippsTextField.swift */,
-				AF9E1BD224ED5ED900655FC7 /* DescriptionTextField.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -311,8 +315,7 @@
 			files = (
 				AFEA3F2324E1ED9100B9BE47 /* TabBar.swift in Sources */,
 				AFEA3F1E24E1E8A300B9BE47 /* RoundButton.swift in Sources */,
-				AF9E1BCA24ED54E100655FC7 /* Warning.swift in Sources */,
-				AF5392E724E2BFFF00B9B0C2 /* Transaction.swift in Sources */,
+				AF5392E724E2BFFF00B9B0C2 /* TransactionView.swift in Sources */,
 				AFEA3F1A24E1DBA800B9BE47 /* RoundImage.swift in Sources */,
 				AFEA3F2F24E2921300B9BE47 /* Navigation.swift in Sources */,
 				AF22525424E2948900CA9457 /* MoneyModal.swift in Sources */,
@@ -340,8 +343,7 @@
 			files = (
 				AFEA3F2424E1ED9100B9BE47 /* TabBar.swift in Sources */,
 				AFEA3F1F24E1E8A300B9BE47 /* RoundButton.swift in Sources */,
-				AF9E1BCB24ED54E100655FC7 /* Warning.swift in Sources */,
-				AF5392E824E2BFFF00B9B0C2 /* Transaction.swift in Sources */,
+				AF5392E824E2BFFF00B9B0C2 /* TransactionView.swift in Sources */,
 				AFF1922E24E1CF6100596753 /* HomeView.swift in Sources */,
 				AFEA3F3024E2921300B9BE47 /* Navigation.swift in Sources */,
 				AF22525524E2948900CA9457 /* MoneyModal.swift in Sources */,

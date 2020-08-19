@@ -10,14 +10,14 @@ import SwiftUI
 struct ActionButton: View {
     var text: String
     var isValid: Bool
-    @Binding var number: Int
-    @Binding var warning: Warning
+    var number: Int
+    @Binding var warning: Bool
     
     
     var body: some View {
         Button(action: {
             if number <= 0 {
-                warning = Warning(text: "Tast inn beløp for å fortsette", display: true)
+                warning = true
             }
         }) {
             VStack(alignment: .center, spacing: 5, content: {
