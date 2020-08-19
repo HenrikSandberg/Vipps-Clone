@@ -12,6 +12,7 @@ struct VippsTextField: View {
     @Binding var warning: Bool
     @Binding var description: String
     var number: Int
+    @Binding var changes: Bool
 
     var body: some View {
         HStack {
@@ -24,6 +25,7 @@ struct VippsTextField: View {
                 TextField("0", text: $text)
                     .onChange(of: text, perform: { _ in
                         let numberText = text.removAllWhitespaces
+                        changes = false
                         
                         if numberText.isNumber{
                             let newNumber = Int(numberText)!
@@ -31,6 +33,7 @@ struct VippsTextField: View {
                             if description.count <= 0 {
                                 warning = newNumber >= 1000000
                                 text = warning ? number.formattedWithSeparator : newNumber.formattedWithSeparator
+                                warning = newNumber >= 100000
                             } else {
                                 warning = false
                             }

@@ -17,9 +17,11 @@ struct Transaction: View {
     @State var text: String = ""
     @State var shouldDisplayWarning: Bool = false
     @State var description: String = ""
+    @State var transactionButtonPressed: Bool = false
+    @State var warningTitle: String = ""
     
     var isValid: Bool {
-        if 0 < number && number < 100000 {
+        if 0 < number && number < 500000 {
             return true
         } else {
             return description.count > 0 && number > 0 && number < 500000
@@ -29,7 +31,13 @@ struct Transaction: View {
     var warning: WarningView {
         if number <= 0 {
             return WarningView(warningString: "Tast inn beløp for å fortsette", simpleWarning: false)
-        } else if number >= 10000 && description.count <= 0 {
+        } else if number >= 50000 && description.count <= 0 {
+            if transactionButtonPressed {
+                return WarningView(
+                    warningString: "Legg med en beskrivelse av hva det gjelder i meldingsfeltet",
+                    simpleWarning: false,
+                    warningTitle: "Beløp fra og med 50 000 kr trenger beskrivelse.")
+            }
             return WarningView(warningString: "Høye beløp må ha beskrivelse", simpleWarning: true)
         } else {
             return WarningView(warningString: "Høye beløp må ha beskrivelse", simpleWarning: true)
@@ -58,19 +66,24 @@ struct Transaction: View {
             })
             
             //MARK: Display money field & and relevenat content
-            VStack {
-                if shouldDisplayWarning { warning }
+            VStack(alignment: .center, spacing: 5) {
+                if shouldDisplayWarning {
+                    warning
+                        .padding(.horizontal, 20)
+                }
                 
                 VStack(alignment: .center, spacing: 15, content: {
                     VippsTextField(
                         text: $text,
                         warning: $shouldDisplayWarning,
                         description:$description,
-                        number: number
+                        number: number,
+                        changes: $transactionButtonPressed
                     )
                     DescriptionTextField(
                         text: $description,
-                        warning: $shouldDisplayWarning
+                        warning: $shouldDisplayWarning,
+                        changes: $transactionButtonPressed
                     )
                     Spacer()
                 })
@@ -81,8 +94,16 @@ struct Transaction: View {
                 
                 Spacer()
                 
-                ActionButton(text: "Neste", isValid: isValid, number: number, warning: $shouldDisplayWarning)
+                ActionButton(
+                    text: "Neste",
+                    isValid: isValid,
+                    number: number,
+                    warning: $shouldDisplayWarning,
+                    pressed: $transactionButtonPressed
+                )
             }
+            .animation(.easeInOut)
+            .transition(.move(edge: .top))
         })
         .navigationBarTitle(Text("\((isSending) ? "Sender penger til" : "Ber om penger fra")"), displayMode: .inline)
         .navigationBarItems(trailing: Button("Avbryt", action: {

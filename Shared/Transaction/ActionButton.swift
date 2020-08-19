@@ -12,6 +12,7 @@ struct ActionButton: View {
     var isValid: Bool
     var number: Int
     @Binding var warning: Bool
+    @Binding var pressed: Bool
     
     
     var body: some View {
@@ -19,6 +20,7 @@ struct ActionButton: View {
             if number <= 0 {
                 warning = true
             }
+            pressed = true
         }) {
             VStack(alignment: .center, spacing: 5, content: {
                 Text(text)

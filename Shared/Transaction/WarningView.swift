@@ -10,12 +10,28 @@ import SwiftUI
 struct WarningView: View {
     var warningString: String
     var simpleWarning: Bool
+    var warningTitle: String?
+    @State var scale: CGFloat = 1
     
     var body: some View {
-        Text(warningString)
-            .foregroundColor(Color(simpleWarning ? "Ebony" : "Feedback No"))
+        withAnimation {
+            VStack(alignment: .center, spacing: 5, content: {
+                if let title = warningTitle {
+                    Text(title)
+                        .fontWeight(.bold)
+                        .fixedSize(horizontal: false, vertical: true)
+                        .padding(.horizontal)
+                }
+                Text(warningString)
+                    .fixedSize(horizontal: false, vertical: true)
+                    .padding(.horizontal)
+            })
+            .lineLimit(.none)
             .padding()
+            .foregroundColor(Color(simpleWarning ? "Ebony" : "Feedback No"))
             .background(Color(simpleWarning ? "Vipps Background change" : "Feedback No Light"))
             .cornerRadius(25)
+            .transition(.moveAndShow)
+        }
     }
 }

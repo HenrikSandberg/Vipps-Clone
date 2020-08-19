@@ -77,3 +77,9 @@ extension Formatter {
 extension Numeric {
     var formattedWithSeparator: String { Formatter.withSeparator.string(for: self) ?? "" }
 }
+
+extension AnyTransition {
+    static var moveAndShow: AnyTransition {
+        AnyTransition.move(edge: .top).combined(with: .opacity)
+    }
+}
