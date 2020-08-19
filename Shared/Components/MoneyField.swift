@@ -8,50 +8,39 @@
 import SwiftUI
 
 struct MoneyField: View {
-    @State var amount: String = ""
+    @State var text: String = ""
+    @State var number: Int = 0
+    @State var warning: Warning = Warning()
+    @State var isValid: Bool = false
+    @State var description: String = ""
+    @State var validDescription: Bool = false
+
     
     var body: some View {
-        VStack(alignment: .center, spacing: 5, content: {
-            HStack(alignment: .center, content: {
-                Spacer()
-                VippsTextField(placeholder: Text("0"), text: $amount)
-                    
-                Text("kr")
-                    .font(.largeTitle)
-                    .fontWeight(.bold)
-                    .foregroundColor(.white)
+        VStack {
+            if warning.display && !validDescription && number <= 0 {
+                if number <= 0 {
+                    WarningView(warning: $warning, simpleWarning: false)
+                } else if !validDescription {
+                    WarningView(warning: $warning, simpleWarning: true)
+                }
+            }
+            VStack(alignment: .center, spacing: 15, content: {
+                VippsTextField(text: $text, number: $number, warning: $warning, isValid: $isValid, hasDescription: $validDescription)
+                DescriptionTextField(text: $description, isValid: $validDescription)
                 Spacer()
             })
+            .frame(width: 200, height: 75, alignment: .center)
+            .padding(50)
+            .background(Color("Ebony"))
+            .clipShape(RoundedRectangle(cornerRadius: 30))
+            
             Spacer()
-        })
-        .frame(width: 200, height: 75, alignment: .center)
-        .padding(50)
-        .background(Color("Ebony"))
-        .clipShape(RoundedRectangle(cornerRadius: 30))
-    }
-}
-
-private struct VippsTextField: View {
-    var placeholder: Text
-    @Binding var text: String
-    var editingChanged: (Bool)->() = { _ in }
-    var commit: ()->() = { }
-
-    var body: some View {
-        ZStack(alignment: .trailing) {
-            if text.isEmpty {
-                placeholder
-                    .foregroundColor(.white)
-            }
-            TextField("0", text: $text)
-                .font(Font.system(size: 40, weight: .heavy, design: .default))
-                .foregroundColor(.white)
-                .keyboardType(.numberPad)
+            ActionButton(text: "Neste", isValid: $isValid, number: $number, warning: $warning)
         }
-        .font(Font.system(size: 40, weight: .heavy, design: .default))
-        .multilineTextAlignment(.trailing)
     }
 }
+
 
 struct MoneyField_Previews: PreviewProvider {
     static var previews: some View {
