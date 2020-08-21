@@ -14,94 +14,85 @@ struct Transaction: View {
     @State private var showingAlert = false
     
     //MARK: State for transactions
+    
+    @ObservedObject var content = TransactionModel()
     @State var text: String = ""
-    @State var shouldDisplayWarning: Bool = false
-    @State var description: String = ""
-    @State var transactionButtonPressed: Bool = false
-    @State var warningTitle: String = ""
+    @State var warningFlagg = false
+    @State var canDisplaywarning = false
     
-    var isValid: Bool {
-        if 0 < number && number < 500000 {
-            return true
-        } else {
-            return description.count > 0 && number > 0 && number < 500000
-        }
-    }
-    
-    var warning: WarningView {
-        if number <= 0 {
-            return WarningView(warningString: "Tast inn beløp for å fortsette", simpleWarning: false)
-        } else if number >= 50000 && description.count <= 0 {
-            if transactionButtonPressed {
-                return WarningView(
-                    warningString: "Legg med en beskrivelse av hva det gjelder i meldingsfeltet",
-                    simpleWarning: false,
-                    warningTitle: "Beløp fra og med 50 000 kr trenger beskrivelse.")
+    var warning: WarningView? {
+        if !content.isValid() && canDisplaywarning {
+            if content.value <= 0 || warningFlagg && text.count <= 0{
+                return WarningView(warningString: "Tast inn beløp for å fortsette.", simpleWarning: false)
+            } else if content.description.count <= 0 {
+                if warningFlagg {
+                    return WarningView(
+                        warningString: "Legg med en beskrivelse av hva det gjelder i meldingsfeltet",
+                        simpleWarning: false,
+                        warningTitle: "Beløp fra og med 50 000 kr trenger beskrivelse.")
+                } else if content.value > content.limit() {
+                    return WarningView(warningString: "Høye beløp må ha beskrivelse", simpleWarning: true)
+                }
             }
-            return WarningView(warningString: "Høye beløp må ha beskrivelse", simpleWarning: true)
-        } else {
-            return WarningView(warningString: "Høye beløp må ha beskrivelse", simpleWarning: true)
         }
-    }
-    
-    var number: Int {
-        let newText = text.removAllWhitespaces
-        return Int(newText) != nil ? Int(newText)! : 0
+
+        return nil
     }
     
     //MARK: Body
     var body: some View {
         //MARK: Display name, picture and number
         VStack(alignment: .center, spacing: 20, content: {
-            HStack(alignment: .top, spacing: 20, content: {
-                if let imgString = user.imgString{
-                    RoundImage(name: imgString, size: 50)
-                } else {
-                    RoundImage(size: 50)
-                }
-                VStack{
-                    Text("\(user.first) \(user.last)")
+                VStack(alignment: .center, spacing: 0, content: {
+                    HStack(alignment: .top, spacing: 5, content: {
+                        if let imgString = user.imgString {
+                            RoundImage(name: imgString, size: 25)
+                        } else {
+                            RoundImage(size: 25)
+                        }
+                        Text("\(user.first) \(user.last)")
+                    })
                     Text("\(user.phone)")
-                }
-            })
+                        .font(.subheadline)
+                        .foregroundColor(.gray)
+                }).multilineTextAlignment(.leading)
+            
             
             //MARK: Display money field & and relevenat content
             VStack(alignment: .center, spacing: 5) {
-                if shouldDisplayWarning {
-                    warning
-                        .padding(.horizontal, 20)
+                if !content.isValid() {
+                    if let displayWarning = warning {
+                        displayWarning
+                    }
                 }
+
                 
-                VStack(alignment: .center, spacing: 15, content: {
-                    VippsTextField(
-                        text: $text,
-                        warning: $shouldDisplayWarning,
-                        description:$description,
-                        number: number,
-                        changes: $transactionButtonPressed
-                    )
-                    DescriptionTextField(
-                        text: $description,
-                        warning: $shouldDisplayWarning,
-                        changes: $transactionButtonPressed
-                    )
-                    Spacer()
-                })
-                .frame(width: 200, height: 75, alignment: .center)
-                .padding(50)
-                .background(Color("Ebony"))
-                .clipShape(RoundedRectangle(cornerRadius: 30))
-                
+                TransactionForm(text: $text, content: content)
+                    .onChange(of: text, perform: { value in
+                        warningFlagg = false
+                        canDisplaywarning = true
+                    })
                 Spacer()
                 
-                ActionButton(
-                    text: "Neste",
-                    isValid: isValid,
-                    number: number,
-                    warning: $shouldDisplayWarning,
-                    pressed: $transactionButtonPressed
-                )
+                Button(action: {
+                    if !content.isValid() {
+                        warningFlagg = true
+                        canDisplaywarning = true
+                    }
+                }) {
+                    VStack(alignment: .center, spacing: 5, content: {
+                        Text("Neste")
+                            .foregroundColor(.white)
+                            .fontWeight(.semibold)
+                            .font(Font.system(size: 25, weight: .heavy, design: .default))
+                    })
+                    .padding(15)
+                    .padding(.horizontal, 30)
+                    .background(Color(content.isValid() && text.count < 0 ? "AccentColor" : "Gray" ))
+                    .cornerRadius(25)
+                }
             }
+            .padding()
             .animation(.easeInOut)
             .transition(.move(edge: .top))
         })
@@ -120,5 +111,21 @@ struct Transaction: View {
                     self.showingAlert = false
                 }))
         })
+    }
+}
+//MARK: Previews
+struct Transaction_Previews: PreviewProvider {
+    
+    @Environment(\.presentationMode) static var p
+    static let transaction = TransactionModel()
+    
+    static var previews: some View{
+        Transaction(
+            user: User(
+                first: "Henrik",
+                last: "Sandberg",
+                phone: "+47 934 431 44"),
+            isSending: true,
+            presentationMode: p)
     }
 }
