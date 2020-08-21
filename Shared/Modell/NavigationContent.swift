@@ -20,12 +20,12 @@ enum NavigationCase {
     case profil
 }
 
-var destinations = [
-    HomeView(),
-    HomeView(),
-    HomeView(),
-    HomeView()
-]
+//var destinations = [
+//    HomeView(),
+//    HomeView(),
+//    HomeView(),
+//    ProfilePage()
+//]
 
 let navigationContent = [
     NavigationItem(name: "Hjem", icon: "house.fill", tag: .hjem),

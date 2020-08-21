@@ -11,6 +11,9 @@
 		AF004DE924EFE06A0061D8CA /* TransactionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF004DE724EFE06A0061D8CA /* TransactionModel.swift */; };
 		AF004DEE24EFF8EF0061D8CA /* TransactionForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF004DED24EFF8EF0061D8CA /* TransactionForm.swift */; };
 		AF004DEF24EFF8EF0061D8CA /* TransactionForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF004DED24EFF8EF0061D8CA /* TransactionForm.swift */; };
+		AF004DF124F00ECD0061D8CA /* ProfilePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF004DF024F00ECD0061D8CA /* ProfilePage.swift */; };
+		AF004DF224F00ECD0061D8CA /* ProfilePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF004DF024F00ECD0061D8CA /* ProfilePage.swift */; };
+		AF004DF324F035640061D8CA /* AppTabNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEA3F2224E1ED9100B9BE47 /* AppTabNavigation.swift */; };
 		AF22525424E2948900CA9457 /* MoneyModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF22525324E2948900CA9457 /* MoneyModal.swift */; };
 		AF22525524E2948900CA9457 /* MoneyModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF22525324E2948900CA9457 /* MoneyModal.swift */; };
 		AF22525724E29B6600CA9457 /* VisualEffectBlur.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF22525624E29B6600CA9457 /* VisualEffectBlur.swift */; };
@@ -30,12 +33,11 @@
 		AFEA3F1C24E1E16A00B9BE47 /* MainListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF1923B24E1D68200596753 /* MainListItem.swift */; };
 		AFEA3F1E24E1E8A300B9BE47 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEA3F1D24E1E8A300B9BE47 /* RoundButton.swift */; };
 		AFEA3F1F24E1E8A300B9BE47 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEA3F1D24E1E8A300B9BE47 /* RoundButton.swift */; };
-		AFEA3F2324E1ED9100B9BE47 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEA3F2224E1ED9100B9BE47 /* TabBar.swift */; };
-		AFEA3F2424E1ED9100B9BE47 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEA3F2224E1ED9100B9BE47 /* TabBar.swift */; };
+		AFEA3F2324E1ED9100B9BE47 /* AppTabNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEA3F2224E1ED9100B9BE47 /* AppTabNavigation.swift */; };
 		AFEA3F2624E1EF5900B9BE47 /* ActionButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEA3F2524E1EF5900B9BE47 /* ActionButtons.swift */; };
 		AFEA3F2724E1EF5900B9BE47 /* ActionButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEA3F2524E1EF5900B9BE47 /* ActionButtons.swift */; };
-		AFEA3F2924E1EFF700B9BE47 /* Sidebar.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEA3F2824E1EFF700B9BE47 /* Sidebar.swift */; };
-		AFEA3F2A24E1EFF700B9BE47 /* Sidebar.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEA3F2824E1EFF700B9BE47 /* Sidebar.swift */; };
+		AFEA3F2924E1EFF700B9BE47 /* AppSidebarNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEA3F2824E1EFF700B9BE47 /* AppSidebarNavigation.swift */; };
+		AFEA3F2A24E1EFF700B9BE47 /* AppSidebarNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEA3F2824E1EFF700B9BE47 /* AppSidebarNavigation.swift */; };
 		AFEA3F2C24E1F05200B9BE47 /* NavigationContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEA3F2B24E1F05200B9BE47 /* NavigationContent.swift */; };
 		AFEA3F2D24E1F05200B9BE47 /* NavigationContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEA3F2B24E1F05200B9BE47 /* NavigationContent.swift */; };
 		AFEA3F2F24E2921300B9BE47 /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEA3F2E24E2921300B9BE47 /* Navigation.swift */; };
@@ -54,6 +56,7 @@
 /* Begin PBXFileReference section */
 		AF004DE724EFE06A0061D8CA /* TransactionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionModel.swift; sourceTree = "<group>"; };
 		AF004DED24EFF8EF0061D8CA /* TransactionForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionForm.swift; sourceTree = "<group>"; };
+		AF004DF024F00ECD0061D8CA /* ProfilePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePage.swift; sourceTree = "<group>"; };
 		AF22525324E2948900CA9457 /* MoneyModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyModal.swift; sourceTree = "<group>"; };
 		AF22525624E29B6600CA9457 /* VisualEffectBlur.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisualEffectBlur.swift; sourceTree = "<group>"; };
 		AF22525824E29B7000CA9457 /* VisualEffectBlur.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisualEffectBlur.swift; sourceTree = "<group>"; };
@@ -64,9 +67,9 @@
 		AFA8F5D624E2AFE600E937EB /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		AFEA3F1924E1DBA800B9BE47 /* RoundImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundImage.swift; sourceTree = "<group>"; };
 		AFEA3F1D24E1E8A300B9BE47 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
-		AFEA3F2224E1ED9100B9BE47 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
+		AFEA3F2224E1ED9100B9BE47 /* AppTabNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabNavigation.swift; sourceTree = "<group>"; };
 		AFEA3F2524E1EF5900B9BE47 /* ActionButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButtons.swift; sourceTree = "<group>"; };
-		AFEA3F2824E1EFF700B9BE47 /* Sidebar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sidebar.swift; sourceTree = "<group>"; };
+		AFEA3F2824E1EFF700B9BE47 /* AppSidebarNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSidebarNavigation.swift; sourceTree = "<group>"; };
 		AFEA3F2B24E1F05200B9BE47 /* NavigationContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationContent.swift; sourceTree = "<group>"; };
 		AFEA3F2E24E2921300B9BE47 /* Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigation.swift; sourceTree = "<group>"; };
 		AFF1921824E1CF5E00596753 /* Vipps_CloneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vipps_CloneApp.swift; sourceTree = "<group>"; };
@@ -121,9 +124,9 @@
 		AFEA3F2124E1ED6500B9BE47 /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
-				AFEA3F2224E1ED9100B9BE47 /* TabBar.swift */,
-				AFEA3F2824E1EFF700B9BE47 /* Sidebar.swift */,
+				AFEA3F2824E1EFF700B9BE47 /* AppSidebarNavigation.swift */,
 				AFEA3F2E24E2921300B9BE47 /* Navigation.swift */,
+				AFEA3F2224E1ED9100B9BE47 /* AppTabNavigation.swift */,
 			);
 			path = Navigation;
 			sourceTree = "<group>";
@@ -149,6 +152,7 @@
 				AFF1924024E1D82F00596753 /* Library */,
 				AFF1921824E1CF5E00596753 /* Vipps_CloneApp.swift */,
 				AFF1921A24E1CF6100596753 /* Assets.xcassets */,
+				AF004DF024F00ECD0061D8CA /* ProfilePage.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -309,9 +313,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AFEA3F2324E1ED9100B9BE47 /* TabBar.swift in Sources */,
+				AFEA3F2324E1ED9100B9BE47 /* AppTabNavigation.swift in Sources */,
 				AFEA3F1E24E1E8A300B9BE47 /* RoundButton.swift in Sources */,
 				AF004DEE24EFF8EF0061D8CA /* TransactionForm.swift in Sources */,
+				AF004DF124F00ECD0061D8CA /* ProfilePage.swift in Sources */,
 				AF5392E724E2BFFF00B9B0C2 /* TransactionView.swift in Sources */,
 				AFEA3F1A24E1DBA800B9BE47 /* RoundImage.swift in Sources */,
 				AFEA3F2F24E2921300B9BE47 /* Navigation.swift in Sources */,
@@ -327,7 +332,7 @@
 				AFF1922B24E1CF6100596753 /* Vipps_CloneApp.swift in Sources */,
 				AFA8F5D424E2AE1100E937EB /* QuickProfile.swift in Sources */,
 				AFEA3F2C24E1F05200B9BE47 /* NavigationContent.swift in Sources */,
-				AFEA3F2924E1EFF700B9BE47 /* Sidebar.swift in Sources */,
+				AFEA3F2924E1EFF700B9BE47 /* AppSidebarNavigation.swift in Sources */,
 				AFF1923E24E1D82A00596753 /* Libraryswift.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -336,9 +341,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AFEA3F2424E1ED9100B9BE47 /* TabBar.swift in Sources */,
 				AFEA3F1F24E1E8A300B9BE47 /* RoundButton.swift in Sources */,
 				AF004DEF24EFF8EF0061D8CA /* TransactionForm.swift in Sources */,
+				AF004DF224F00ECD0061D8CA /* ProfilePage.swift in Sources */,
 				AF5392E824E2BFFF00B9B0C2 /* TransactionView.swift in Sources */,
 				AFF1922E24E1CF6100596753 /* HomeView.swift in Sources */,
 				AFEA3F3024E2921300B9BE47 /* Navigation.swift in Sources */,
@@ -350,11 +355,12 @@
 				AFF1923F24E1D82A00596753 /* Libraryswift.swift in Sources */,
 				AF004DE924EFE06A0061D8CA /* TransactionModel.swift in Sources */,
 				AF22525924E29B7000CA9457 /* VisualEffectBlur.swift in Sources */,
+				AF004DF324F035640061D8CA /* AppTabNavigation.swift in Sources */,
 				AFEA3F1B24E1DBAD00B9BE47 /* RoundImage.swift in Sources */,
 				AFF1922C24E1CF6100596753 /* Vipps_CloneApp.swift in Sources */,
 				AFA8F5D524E2AE1100E937EB /* QuickProfile.swift in Sources */,
 				AFEA3F2D24E1F05200B9BE47 /* NavigationContent.swift in Sources */,
-				AFEA3F2A24E1EFF700B9BE47 /* Sidebar.swift in Sources */,
+				AFEA3F2A24E1EFF700B9BE47 /* AppSidebarNavigation.swift in Sources */,
 				AFEA3F1C24E1E16A00B9BE47 /* MainListItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -88,7 +88,7 @@ struct Transaction: View {
                     })
                     .padding(15)
                     .padding(.horizontal, 30)
-                    .background(Color(content.isValid() && text.count < 0 ? "AccentColor" : "Gray" ))
+                    .background(Color(content.isValid() && text.count > 0 ? "AccentColor" : "Gray" ))
                     .cornerRadius(25)
                 }
             }

@@ -15,9 +15,9 @@ struct Navigation: View {
     var body: some View {
         #if os(iOS)
         if horizintalSizeClass == .compact {
-            TabBar()
+            AppTabNavigation()
         } else {
-            Sidebar()
+            AppSidebarNavigation()
         }
         #endif
     }
