@@ -39,14 +39,14 @@ struct ProfilePage: View {
         ScrollView {
             GeometryReader { geometry in
                 ZStack {
-                    VStack{
+                    VStack {
                         Image("QRCode")
                             .resizable()
                             .frame(width: 250, height: 250)
                             .offset(x: 0, y: -self.getOffsetForHeaderImage(geometry)/1.8)
                     }
                         .scaledToFill()
-                        .frame(width: geometry.size.width, height: self.getHeightForHeaderImage(geometry), alignment: .center)
+                        .frame(width: 500, height: self.getHeightForHeaderImage(geometry), alignment: .center)
                         .background(Color("AccentColor"))
                         .clipped()
                         .offset(x: 0, y: self.getOffsetForHeaderImage(geometry))
