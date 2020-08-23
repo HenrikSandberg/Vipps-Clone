@@ -56,6 +56,7 @@ struct TransactionForm: View {
                     .multilineTextAlignment(.center)
             }
         })
+        .frame(maxWidth: 400)
         .padding(40)
         .background(Color("Ebony"))
         .clipShape(RoundedRectangle(cornerRadius: 30))
